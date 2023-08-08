@@ -54,14 +54,14 @@ int main()
 
     /************************************************************/
 
-    vector<double> precios = {1000000, 250000, 320000, 10000, 1500000, 3000000, 9000, 8000};
+    vector<double> precios = {50, 120, 75, 300, 1500000, 90, 200};
 
     double descuento = 0.15;
 
     for (double j = 0; j < precios.size(); j++)
     {
 
-        if (precios[j] <= 10000)
+        if (precios[j] <= 100)
         {
             // Tenemos un listado de productos y queremos colocarle un descuento del 10% a todos
             // excepto al producto que cuesta 10K, a los demas si aplica. Con el continue omitiria
