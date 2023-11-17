@@ -6,4 +6,36 @@ donde se la llama, en lugar de hacer una llamada de función tradicional.
 lo cual es especialmente útil para funciones pequeñas que se utilizan a menudo.
 Al estar el cuerpo de la función en el mismo punto de la llamada, se elimina la sobrecarga asociada
 con las llamadas a funciones (como el paso de argumentos y el valor del retorno de control)
+
+SINTAXIS (aplica para funciones void)
+inline int sumar(int a, int b){
+    return a + b;
+}
+
+VENTAJAS
+Optimización de rendimiento
+Menor tiempo de ejecución
+El compilador decide
+
+DESVENTAJAS
+Impacto en el tamaño del código
+
 */
+#include <iostream>
+using namespace std;
+
+// puede ser void
+inline int sumar(int a, int b)
+{
+    return a + b;
+}
+
+int main()
+{
+
+    int x = 5, y = 3;
+
+    int resultado = sumar(x, y);
+
+    cout << "La suma de " << x << " y " << y << " es: " << resultado << endl;
+}
