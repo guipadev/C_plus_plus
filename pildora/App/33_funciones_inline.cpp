@@ -35,6 +35,8 @@ int main()
 
     int x = 5, y = 3;
 
+    // El compilador lo que hace es sustituir el cuerpo de la funcion por la llamada 'return x + y;'
+    // Si la llamamos 100 veces, son 100 veces que sustituye el cuerp por la llamada
     int resultado = sumar(x, y);
 
     cout << "La suma de " << x << " y " << y << " es: " << resultado << endl;
