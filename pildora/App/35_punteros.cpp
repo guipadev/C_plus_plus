@@ -43,3 +43,58 @@
 * Constantes y referencias
 * Punteros inteligentes
 */
+
+#include <iostream>
+using namespace std;
+
+int variable = 15;
+
+// Cambio valor variable
+void miFuncion(int var)
+{
+    var = var + 10;
+}
+
+// Cambio valor de acuerdo al puntero
+// Es más eficiente en memoria y tiempo, ya que no pasamos una copia de la variable
+// Ya que pasamos una referencia a la variable original y no una copia
+void miFuncion2(int *var)
+{
+    *var = *var + 10;
+}
+
+int main()
+{
+
+    int var = 10;
+
+    // Declarar puntero
+    int *ptr;
+
+    // Uso dirección de la memoria de la variable var
+    ptr = &var;
+
+    cout << var << endl; // Imprimir el valor de var
+
+    cout << &var << endl; // Imprimir la dirección en memoria de var
+
+    cout << ptr << endl; // Imprimir la dirección almacenada en puntero ptr
+
+    cout << *ptr << endl; // Imprimir el valor apuntado por ptr
+
+    // Cambiar el valor de la variable desde el puntero
+    *ptr = 55;
+
+    cout << var << endl; // Modifico el valor de var desde su puntero, que sera 55
+
+    // EJEMPLO 2
+
+    miFuncion(variable);
+
+    cout << variable << endl; // 15
+
+    // Debo pasar valor de dirección en memoria fisica de variable
+    miFuncion2(&variable);
+
+    cout << variable << endl; // 25
+}
